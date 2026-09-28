@@ -1,7 +1,8 @@
-package com.SecurityDemo.SpringSecurity.Service;
+package com.SecurityDemo.SpringSecurity;
 
 import com.SecurityDemo.SpringSecurity.Dto.RegisterRequest;
 import com.SecurityDemo.SpringSecurity.Entity.Users;
+import com.SecurityDemo.SpringSecurity.Service.CustomUserDetailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
