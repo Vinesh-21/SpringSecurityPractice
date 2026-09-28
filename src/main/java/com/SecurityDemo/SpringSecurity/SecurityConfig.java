@@ -1,6 +1,7 @@
 package com.SecurityDemo.SpringSecurity;
 
 import com.SecurityDemo.SpringSecurity.Filters.JWTAuthFilter;
+import com.SecurityDemo.SpringSecurity.Service.CustomUserDetailService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -40,7 +41,7 @@ public class SecurityConfig {
 
     @Bean
     public AuthenticationManager authenticationManager(
-            UserDetailsService userDetailsService,
+            CustomUserDetailService userDetailsService,
             PasswordEncoder passwordEncoder) {
 
         DaoAuthenticationProvider provider =
