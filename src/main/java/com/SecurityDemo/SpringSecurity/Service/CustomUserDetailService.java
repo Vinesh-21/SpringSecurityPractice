@@ -33,12 +33,11 @@ public class CustomUserDetailService implements UserDetailsService {
         return user;
     }
 
+    public boolean usernameExists(String username) {
+        return userDetailsRepository.findByUsername(username) != null;
+    }
+
     public Users registerUser(RegisterRequest request) {
-
-        if (userDetailsRepository.findByUsername(request.getUsername()) != null) {
-            throw new RuntimeException("Username already exists");
-        }
-
         Users user = new Users();
 
         user.setUsername(request.getUsername());
