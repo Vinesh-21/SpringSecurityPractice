@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: SpringSecurity
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/springSecurity
+  security:
+    user:
+      name: user
+      password: password
